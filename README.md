@@ -1,46 +1,163 @@
-# Getting Started with Create React App
+# Friendly Solutions - code task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Description
 
-## Available Scripts
+- We have included json data snapshot on the bottom of that file. It includes the example of work orders data we process everyday.
+- Take 10 minutes to become familiar with the content of the json data before beginning with the tasks and bonus items.
+- You should not spend more than 90-120 minutes on this task. The bonus items are extended goal tasks.
+- You can use (but you do not need to) MobX or Redux for state management.
 
-In the project directory, you can run:
+### Tasks
 
-### `npm start`
+1. Initialize React web app project with TypeScript
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Wrap JSON in Promise and imitiate fetching from remote API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3. Create a screen with table including the following information:
 
-### `npm test`
+    - WO ID
+    - Description
+    - Received date
+    - Assigned to
+    - Status
+    - Priority
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Add types with TypeScript
 
-### `npm run build`
+5. Do a simple styling with flexbox (just to show that you know how it works in case of using it then in React Native)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. Create a simple README.md with install / usage instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Bonus
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Search input to search for work orders by description
+2. Use custom hooks
 
-### `npm run eject`
+There are no right or wrong solutions for this task. Once complete, create a public repo on Github and email us with your solution.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<b style="color:red;">Please do not put this file in repository.</b>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Happy coding.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### JSON
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```json
+{
+  "exec_time": 0.11,
+  "response": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "per_page": 10,
+    "to": 10,
+    "total": 8,
+    "data": [
+      {
+        "work_order_id": 1,
+        "description": "Create a connection to SQL database using Excel",
+        "received_date": "2021-07-21 00:23:03",
+        "assigned_to": [
+          {
+            "person_name": "Technician One",
+            "status": "Assigned"
+          }
+        ],
+        "status": "New",
+        "priority": "Low"
+      },
 
-## Learn More
+      {
+        "work_order_id": 2,
+        "description": "Need to make update for laptop 11",
+        "received_date": "2021-07-20 15:23:03",
+        "assigned_to": [
+          {
+            "person_name": "Technician Two",
+            "status": "Assigned"
+          }
+        ],
+        "status": "New",
+        "priority": "Low"
+      },
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+      {
+        "work_order_id": 3,
+        "description": "Setup station 2",
+        "received_date": "2021-07-20 14:23:03",
+        "assigned_to": [
+          {
+            "person_name": "Technician One",
+            "status": "In progress"
+          }
+        ],
+        "status": "Confirmed",
+        "priority": "High"
+      },
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+      {
+        "work_order_id": 4,
+        "description": "Setup station 3",
+        "received_date": "2021-07-19 12:23:03",
+        "assigned_to": [
+          {
+            "person_name": "Technician Two",
+            "status": "Assigned"
+          },
+          {
+            "person_name": "Technician One",
+            "status": "In progress"
+          }
+        ],
+        "status": "Confirmed",
+        "priority": "High"
+      },
+
+      {
+        "work_order_id": 5,
+        "description": "Mailbox issues",
+        "received_date": "2021-07-19 11:23:03",
+        "assigned_to": [
+          {
+            "person_name": "Technician Two",
+            "status": "Confirmed"
+          }
+        ],
+        "status": "Confirmed",
+        "priority": "Normal"
+      },
+
+      {
+        "work_order_id": 6,
+        "description": "Subject: We sent you issue last Friday",
+        "received_date": "2021-07-17 11:23:03",
+        "assigned_to": [],
+        "status": "New",
+        "priority": "Low"
+      },
+
+      {
+        "work_order_id": 7,
+        "description": "Internal work",
+        "received_date": "2021-07-17 10:23:03",
+        "assigned_to": [],
+        "status": "Canceled",
+        "priority": "Low"
+      },
+
+      {
+        "work_order_id": 8,
+        "description": "Set up station for new user",
+        "received_date": "2021-07-16 09:23:03",
+        "assigned_to": [
+          {
+            "person_name": "Technician Two",
+            "status": "Completed"
+          }
+        ],
+        "status": "Completed",
+        "priority": "Low"
+      }
+    ]
+  }
+}
+```
