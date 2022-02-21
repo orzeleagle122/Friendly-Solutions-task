@@ -1,7 +1,9 @@
-export const data = () => {
+import {IWorkOrdersResponse} from "../types/IWorkOrdersResponse";
+
+export const data = (): Promise<IWorkOrdersResponse> => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const workData = {
+            const workData: IWorkOrdersResponse = {
                 "exec_time": 0.11,
                 "response": {
                     "current_page": 1,
@@ -115,11 +117,11 @@ export const data = () => {
                             ],
                             "status": "Completed",
                             "priority": "Low"
-                        }
+                        },
                     ]
                 }
             };
             resolve(workData);
-        }, 5000)
+        }, 1200)
     })
 }
